@@ -4,7 +4,6 @@ function todoform() {
 
 
     return (
-        <div className = "todo-search">
             <form className = 'todo-form'>
                 <input
                 type = 'text'
@@ -12,14 +11,20 @@ function todoform() {
                 name='text'
                 className='todo-search'
                 
-            />
-            <button className='todo-add-button'>
-                <i class = "search-icon">
+                />
+                <i class = "todo-search-icon">
                     <img src = "src/Icons/magnifying-glass.png"></img>
                 </i>
+
+            <button className='todo-add-button'>
+                <i class = "add-icon">
+                    <img src = "src/Icons/add.png"></img>
+                </i>
             </button>
+
+
             </form>
-        </div>
+       
             
             
     );
