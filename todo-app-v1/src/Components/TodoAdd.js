@@ -1,6 +1,6 @@
 import React from 'react'
 
-function todoAdd() {
+function TodoAdd() {
     return (
         <div className = "todo-add">
             <form className = "todo-add-form">
@@ -14,11 +14,12 @@ function todoAdd() {
                     </select>
                
             </form>
-            <button className = "create-todo-button">Add</button>
-            <button className = "cancel-todo-button">Cancel</button>
-            
+            <div className = "todo-add-page-add-cancel-button">
+                <button className = "create-todo-button">Add</button>
+                <button className = "cancel-todo-button">Cancel</button>
+            </div>
         </div>
-    )
+    );
 }
 
-export default todoAdd
+export default TodoAdd

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function todoform() {
+function TodoForm() {
 
     return (
         <div className = "todo-form-container">
@@ -15,7 +15,7 @@ function todoform() {
                     </i>
                 </button>
             </form>
-            <form className = "todo-filter-form">
+            <form className = "todo-form-filter">
             <button className = "todo-filter-button">
                 <i className = "filter-icon">
                     <img src = "src/Icons/filter-filled-tools-symbol.png"></img>
@@ -39,4 +39,4 @@ function todoform() {
     );
 }
 
-export default todoform
+export default TodoForm
