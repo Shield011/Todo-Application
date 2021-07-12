@@ -1,33 +1,46 @@
 import React from 'react'
+import { FaPlus } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
+import { FaFilter } from 'react-icons/fa';
+import './TodoForm.css';
 
-function TodoForm() {
+
+
+const TodoForm = () => {
+
+    const clickHandler = (onClick) =>{
+        console.log("Clicked!!!")
+    }
 
     return (
         <div className = "Todo-form-container">
             <form className = 'Todo-form'>
-                <input type = 'text' placeholder= 'Search' name='text'className = 'Todo-search'></input>
-                <i class = "Todo-search-icon">
-                    <img src = "src/Icons/Magnifying-glass.png"></img>
-                </i>
-                <button className='todo-add-button'>
-                    <i className = "add-icon">
-                        <img src = "src/Icons/Add.png"></img>
-                    </i>
+                <fieldset>
+                <input type = 'text' placeholder= 'Search...' name='text' className = 'Todo-search'>  
+                </input>
+                <button className='todo-search-button' onClick = {clickHandler}>
+                    <FaSearch />
                 </button>
+                </fieldset>
+                
+
             </form>
+                
+                
+                
+           
             <form className = "todo-form-filter">
-            <button className = "todo-filter-button">
-                <i className = "filter-icon">
-                    <img src = "todo-app-v1/src/Icons/Filter-filled-tool-symbol.png"></img>
-                    <label for="Filter-menu"></label>
+            <button className='todo-add-button' onClick = {clickHandler}>
+                   New Todo <FaPlus />
+                </button>
+            
+            <label for="Filter-menu">Filter:</label>
                     <select id="Filter-menu-list">
-                    <option value="Date">Date</option>
-                    <option value="Time">Time</option>
+                    <option value="Name">Name</option>
                     <option value="PriorityA">Priority-Ascending</option>
                     <option value="PriorityD">Priority-Descending</option>
                     </select>
-                </i>
-            </button>
+
             </form>
 
             

@@ -1,6 +1,7 @@
 import React from 'react'
 
-function TodoAdd() {
+
+const TodoAdd = ()  => {
     return (
         <div className = "todo-add">
             <form className = "todo-add-form">

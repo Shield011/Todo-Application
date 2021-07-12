@@ -1,0 +1,115 @@
+
+.Todo-form-container{
+
+    background-color: lavender;
+}
+
+    
+.Todo-form{
+    
+    
+   
+  
+    
+}
+
+.Todo-search{
+    font-size: 40px;
+    border-radius: 10px 0px 0px 10px;
+    overflow: hidden;
+    display: initial;
+    height: 63px;
+    width: 550px;
+    
+    
+    
+}
+
+fieldset{
+    font-size: 1em;
+    font-family: sans-serif;
+    width: 98.5%;
+    background-color: rgb(213, 213, 247);
+    border: none;
+    height:100px;
+}
+
+
+
+.todo-search-button{
+    margin-top: 10px;
+    padding: 10px;
+    background: rgb(78, 220, 224);
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+    height: 70px;
+    width: 150px;
+    color:white;
+    border-radius: 0px 10px 10px 0px;
+    
+        
+    
+}
+    
+
+.todo-search-button:hover{
+    background-color: rgb(14, 186, 192);
+    box-shadow:0 0 0 2px teal;
+    top: -1px;
+   
+}
+
+.todo-search-button:active{
+    transform: translateY(4px);
+    background-color:  teal;   
+}
+
+.todo-add-button{
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 200px;
+   
+    text-align: center;
+    background: rgb(166, 74, 228);
+    font-size: 40px;
+    
+    border: none;
+    cursor: pointer;
+    height: 70px;
+    width: 300px;
+    color:white;
+   
+        
+    
+
+}
+
+.todo-add-button:hover{
+    background-color: rgb(146, 41, 216);
+    box-shadow:0 0 0 2px rgb(133, 23, 206);
+    top: -1px;
+}
+
+.todo-add-button:active{
+    transform: translateY(4px);
+    background-color: rgb(146, 41, 216);;  
+}
+
+
+.todo-form-filter{
+    font-size: 35px;
+    margin-top:30px;
+    
+
+}
+
+
+#Filter-menu-list{
+    justify-content: left;
+    align-items: left;
+   
+    font-size: 30px;
+    
+
+}
