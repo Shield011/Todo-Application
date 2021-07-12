@@ -9,6 +9,7 @@ const AddTask = () => {
                 <form>
                     <Setpriority />
 
+                    
                     <div class = "form-group">
                         <label> Add Task </label>
                         <textarea rows = "6" className="form-control" placeholder = "Write here.." name = "newTask"></textarea>
