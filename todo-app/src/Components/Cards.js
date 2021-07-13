@@ -1,54 +1,41 @@
-import React,{useState} from 'react'
-import { Table } from 'reactstrap';
-import { IconButton } from '@material-ui/core';
-import { DeleteIcon } from '@material-ui/icons/Delete';
-import { EditIcon } from '@material-ui/icons/Edit';
+import React, { useState } from 'react'
+import { FaEdit } from 'react-icons/fa';
+import { MdDelete } from 'react-icons/md';
+
 
 
 const Cards = (props) => {
+    let newtaskList = props.taskList;
+
+    const deleteHandler = (e, id) => {
+        e.preventDefault();
+        setTaskList(taskList.filter((t) => t.id != id));
+
+    };
     
 
-  return (
-    <Table>
-      <thead>
-        <tr>
-          {/* <th>Index</th>
-          <th>TaskName</th>
-          <th>Date</th>
-          <th>Edit</th>
-          <th>Delete</th> */}
 
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>React</td>
-          <td>Date</td>
-          <td><IconButton aria-label="edit">
-                <EditIcon />
-            </IconButton></td>
-          <td><IconButton aria-label="delete">
-                <DeleteIcon />
-            </IconButton>
-            </td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>React</td>
-          <td>Date</td>
-          <td><IconButton aria-label="edit">
-                <EditIcon />
-            </IconButton></td>
-          <td><IconButton aria-label="delete">
-                <DeleteIcon />
-            </IconButton>
-            </td>
-        </tr>
-      </tbody>
-    </Table>
-  );
-}
+    return (
+        <div className = "cards-list">
+
+        {newtaskList !== [] ?
+            <ol>
+                {newtaskList.map(t =>
+                    <li className="list-item">{t.props.value}
+                    <FaEdit/>
+                    <MdDelete onClick = {e => deleteHandler(e, t.id)}/></li>
+                    
+                    )
+                    }
+            </ol>
+            : null }
+        </div>
+
+
+
+
+    );
+ }
 
 
 

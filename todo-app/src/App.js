@@ -4,6 +4,7 @@ import TodoList from './Components/TodoList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cards from './Components/Cards';
 import AddTask from './Components/AddTask';
+import EditTask from './Components/EditTask';
 
 function App() {
   return (
@@ -11,10 +12,12 @@ function App() {
     <TodoList />
     <Cards />
     <AddTask></AddTask>
+    {/* <EditTask /> */}
    
     <Router>
       <Switch>
         <Route exact path = "/addTask" component = {AddTask}/>
+        <Route exact path = "/editTask" component = {EditTask}/>
 
       </Switch>
     </Router>
