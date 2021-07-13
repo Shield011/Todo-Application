@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Setpriority from './Setpriority';
 import { Button } from 'reactstrap';
 
-const AddTask = () => {
+const AddTask = (props) => {
     const [task, setTask] = useState('')
     const [taskList, setTaskList] = useState([])
     
@@ -19,8 +19,9 @@ const AddTask = () => {
             }
         setTaskList([...taskList, taskDetails]);
     }
-    
-    };
+
+   
+};
 
     return (
         <div className = "add-task-page">

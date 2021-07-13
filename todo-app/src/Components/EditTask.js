@@ -1,11 +1,14 @@
-import React, { useState }from 'react'
-import Setpriority from './Setpriority';
+import React from 'react'
 import { Button } from 'reactstrap';
 
-const EditTask = (updateTask) => {
+const EditTask = (props) => {
 
     // const [edtitedTask, setEdtitedTask] = useState("")
+    const updateTask = (id, newValue) => {
+        props.setTask(prev => prev.map(item => (item.id === props.task.Id ? newValue : item)));
+        
 
+    };   
     
     return (
         <div className = "edit-task-page">
@@ -17,7 +20,7 @@ const EditTask = (updateTask) => {
                     </div>
                 </form>
           
-            <Button className= "update-button" color = "primary" size="lg" block onClick = {e => updateTask(id, newValue)}>Update</Button>{' '}
+            <Button className= "update-button" color = "primary" size="lg" block onClick = {e => updateTask(props.id, props.newValue)}>Update</Button>{' '}
             <Button className = "canceledit-button"  color = "secondary" size="lg" block>Cancel</Button>
         </div>
            

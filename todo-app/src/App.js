@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import TodoList from './Components/TodoList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cards from './Components/Cards';
