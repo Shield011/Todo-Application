@@ -4,15 +4,7 @@ import { MdDelete } from 'react-icons/md';
 
 
 
-const Cards = (props) => {
-
-    const deleteHandler = (e, id) => {
-        e.preventDefault();
-        props.setTaskList(props.taskList.filter((t) => t.id != id));
-
-    };
-    
-
+const Cards = (deleteHandler) => {
 
     return (
         <div className = "cards-list">

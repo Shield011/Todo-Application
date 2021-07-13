@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState }from 'react'
 import Setpriority from './Setpriority';
 import { Button } from 'reactstrap';
 
-const EditTask = () => {
+const EditTask = (updateTask) => {
 
+    // const [edtitedTask, setEdtitedTask] = useState("")
+
+    
     return (
         <div className = "edit-task-page">
             <h2 className =" edit-task-page-heading"> Edit Task</h2>
@@ -14,7 +17,7 @@ const EditTask = () => {
                     </div>
                 </form>
           
-            <Button className= "update-button" color = "primary" size="lg" block>Update</Button>{' '}
+            <Button className= "update-button" color = "primary" size="lg" block onClick = {e => updateTask(id, newValue)}>Update</Button>{' '}
             <Button className = "canceledit-button"  color = "secondary" size="lg" block>Cancel</Button>
         </div>
            
