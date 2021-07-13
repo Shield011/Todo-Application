@@ -5,11 +5,10 @@ import { MdDelete } from 'react-icons/md';
 
 
 const Cards = (props) => {
-    let newtaskList = props.taskList;
 
     const deleteHandler = (e, id) => {
         e.preventDefault();
-        setTaskList(taskList.filter((t) => t.id != id));
+        props.setTaskList(props.taskList.filter((t) => t.id != id));
 
     };
     
@@ -18,9 +17,9 @@ const Cards = (props) => {
     return (
         <div className = "cards-list">
 
-        {newtaskList !== [] ?
+        {props.taskList !== [] ?
             <ol>
-                {newtaskList.map(t =>
+                {props.taskList.map(t =>
                     <li className="list-item">{t.props.value}
                     <FaEdit/>
                     <MdDelete onClick = {e => deleteHandler(e, t.id)}/></li>

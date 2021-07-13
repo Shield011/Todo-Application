@@ -37,15 +37,6 @@ const AddTask = () => {
             <Button className= "add-button" color = "primary" size="lg" block onClick = {AddTask}>Add</Button>{' '}
             <Button className = "cancel-button"  color = "secondary" size="lg" block>Cancel</Button>
 
-            {taskList !== [] ?
-                <ol>
-                    {taskList.map(t =>
-                        <li className="list-item">{t.value}</li>
-                        )}
-                </ol>
-                : null }
-
-
         
         </div>
 
