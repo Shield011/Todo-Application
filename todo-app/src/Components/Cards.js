@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import { Table } from 'reactstrap';
-import { FaEdit } from 'react-icons/fa';
-import { MdDelete } from 'react-icons/md';
+import { IconButton } from '@material-ui/core';
+import { DeleteIcon } from '@material-ui/icons/Delete';
+import { EditIcon } from '@material-ui/icons/Edit';
 
 
 const Cards = (props) => {
@@ -11,11 +12,11 @@ const Cards = (props) => {
     <Table>
       <thead>
         <tr>
-          <th>Index</th>
+          {/* <th>Index</th>
           <th>TaskName</th>
           <th>Date</th>
           <th>Edit</th>
-          <th>Delete</th>
+          <th>Delete</th> */}
 
         </tr>
       </thead>
@@ -24,15 +25,25 @@ const Cards = (props) => {
           <th scope="row">1</th>
           <td>React</td>
           <td>Date</td>
-          <td><FaEdit/> </td>
-          <td><MdDelete/></td>
+          <td><IconButton aria-label="edit">
+                <EditIcon />
+            </IconButton></td>
+          <td><IconButton aria-label="delete">
+                <DeleteIcon />
+            </IconButton>
+            </td>
         </tr>
         <tr>
-          <th scope="row">1</th>
+          <th scope="row">2</th>
           <td>React</td>
           <td>Date</td>
-          <td><FaEdit/> </td>
-          <td><MdDelete/></td>
+          <td><IconButton aria-label="edit">
+                <EditIcon />
+            </IconButton></td>
+          <td><IconButton aria-label="delete">
+                <DeleteIcon />
+            </IconButton>
+            </td>
         </tr>
       </tbody>
     </Table>

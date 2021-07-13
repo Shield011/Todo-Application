@@ -8,10 +8,10 @@ const Setpriority = (props)  => {
     return (
         <div class = "form-group">
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-        <DropdownToggle caret>
+        <DropdownToggle caret className ="priority-dropdown">
                 Set Priority
             </DropdownToggle>
-            <DropdownMenu>
+            <DropdownMenu className ="priority-dropdown-item">
                 <DropdownItem>High</DropdownItem>
                 <DropdownItem>Mid</DropdownItem>
                 <DropdownItem>Low</DropdownItem>
@@ -19,7 +19,7 @@ const Setpriority = (props)  => {
         </Dropdown>
     
 
-        </div>
+        </div> 
     )
 }
 

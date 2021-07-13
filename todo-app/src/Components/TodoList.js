@@ -1,10 +1,10 @@
 import React from 'react'
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 // import { withRouter } from 'react-router';
 
 
 const  TodoList = () => {
-    const history = useHistory();
+    // let history = useHistory();
 
     return (
         <>
@@ -16,15 +16,15 @@ const  TodoList = () => {
                 <button className = "btn btn-primary"> Search</button>
             </form>
             <br></br>
-            <button className = "btn btn-primary" onClick = {() => {history.push('/addTask');}}> Add New Task </button>
+            <button className = "btn btn-primary" >Add New Task </button>
 
         </div>
 
         <div className = "task-container">
 
         </div>
-             
         </>
+        
     )
 }
 

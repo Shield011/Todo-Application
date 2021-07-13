@@ -5,3 +5,55 @@
     padding-top: 50px;
     
 }
+
+.add-task-page{
+    border: 2px black;
+    display: block;
+    border-radius: 10px;
+    border-style: none;
+    position: fixed;
+    height: 500px;
+    width: 700px;
+    /* top: 30%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px; */
+    padding: 25px;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+    z-index: 100;
+    background-color: rgba(226, 226, 250, 0.322);
+
+}
+
+.priority-dropdown{
+    width: 100%;
+    background-color: skyblue !important;
+}
+
+.priority-dropdown-item{
+    width: 100%;
+}
+
+.edit-button:hover{
+    cursor:pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 98px 6px rgba(0, 0, 0, 0.2); 
+
+
+
+
+}
+
+.delete-button:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 98px 6px rgba(0, 0, 0, 0.2); 
+
+
+
+}
+
+
+
