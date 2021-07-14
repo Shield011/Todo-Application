@@ -23,23 +23,24 @@ const AddTask = (props) => {
             }
         setTaskList([...taskList, taskDetails]);
     }
+};
 
-    // const updateTask = (id, newValue) => {
-    //     props.setTask(prev => prev.map(item => (item.id === props.task.Id ? newValue : item)));
+    const updateTask = (id, newValue) => {
+        props.setTask(prev => prev.map(item => (item.id === props.task.Id ? newValue : item)));
         
 
-    // }; 
+    }; 
 
-    // const deleteHandler = (e, id) => {
-    //     e.preventDefault();
-    //     props.setTaskList(props.taskList.filter((t) => t.id !== id));
+    const deleteHandler = (e, id) => {
+        e.preventDefault();
+        props.setTaskList(props.taskList.filter((t) => t.id !== id));
 
-    // };
+    };
     
 
    
-};
 
+   
     return (
         <div className = "add-task-page">
             <h2 className =" add-task-page-heading">Create New Task</h2>
@@ -57,8 +58,8 @@ const AddTask = (props) => {
             {taskList !== [] ?
             <ol>
                 {taskList.map(t => <li className="list-item">{t.value}
-                    {/* <FaEdit onClick = {updateTask}/>
-                    <MdDelete onClick = {deleteHandler}/> */}
+                    <FaEdit onClick = {updateTask}/>
+                    <MdDelete onClick = {deleteHandler}/>
                     
                     </li>
                     
@@ -73,8 +74,8 @@ const AddTask = (props) => {
     )
            
     
-}
 
+}
 
 export default withRouter (AddTask);
 
