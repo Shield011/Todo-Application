@@ -116,9 +116,17 @@
     
 .filter-dropdown-item{
     width: 15% !important;
+
 }
 
-    
+
+/* .blur{
+
+    background-color: rgba(230, 230, 250, 0.541);
+    height: 100%;
+    width: 100vw;
+}
+     */
 
 
 
