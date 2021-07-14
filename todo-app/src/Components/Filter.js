@@ -9,7 +9,7 @@ const Filter = (props)  => {
         <div class = "form-group">
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
         <DropdownToggle caret className ="filter-dropdown">
-                Set Priority
+                Filter
             </DropdownToggle>
             <DropdownMenu className ="filter-dropdown-item">
                 <DropdownItem>Name</DropdownItem>

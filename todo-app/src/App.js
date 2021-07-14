@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import TodoList from './Components/TodoList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cards from './Components/Cards';
@@ -13,16 +13,16 @@ function App() {
     <TodoList />
     <Filter />
     <Cards />
-    <AddTask></AddTask>
+    {/* <AddTask></AddTask> */}
     {/* <EditTask /> */}
    
-    <Router>
+    {/* <Router>
       <Switch>
         <Route exact path = "/addTask" component = {AddTask}/>
         <Route exact path = "/editTask" component = {EditTask}/>
 
       </Switch>
-    </Router>
+    </Router> */}
 
     
    

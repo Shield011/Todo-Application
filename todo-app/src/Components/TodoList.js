@@ -4,8 +4,14 @@ import { InputGroup, InputGroupAddon, Button, Input } from 'reactstrap';
 // import { withRouter } from 'react-router';
 
 
-const  TodoList = () => {
-    // let history = useHistory();
+const  TodoList = (props) => {
+    
+    
+        // let history = useHistory();
+
+        const handleClick = () => {
+            props.history.push("/AddTask");
+    }
 
     return (
         <>
@@ -22,7 +28,8 @@ const  TodoList = () => {
                 {/* <button className = "btn btn-primary"> Search</button> */}
             </form>
             <br></br>
-            <button className = "btn btn-primary addTask-button"  >Add New Task </button>
+            <button className = "btn btn-primary addTask-button" onClick = {handleClick}>Add New Task </button>
+        
 
         </div>
 
