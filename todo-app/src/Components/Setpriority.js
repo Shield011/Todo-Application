@@ -6,7 +6,7 @@ const Setpriority = (props)  => {
 
     const toggle = () => setDropdownOpen(prevState => !prevState);
     return (
-        <div class = "form-group">
+        <div className = "form-group">
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
         <DropdownToggle caret className ="priority-dropdown">
                 Set Priority

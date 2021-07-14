@@ -1,12 +1,15 @@
 import React, {useState} from 'react'
 import Setpriority from './Setpriority';
 import { Button } from 'reactstrap';
-import { withRouter } from "react-router";
 import { FaEdit } from 'react-icons/fa';
 import { MdDelete } from 'react-icons/md';
+import TodoList from './TodoList';
 
-const AddTask = (props) => {
+const AddTaskmain = (props) => {
+
+    const [state, setstate] = useState(" visible ")
     
+   
     const [task, setTask] = useState('')
     const [taskList, setTaskList] = useState([])
     
@@ -26,23 +29,30 @@ const AddTask = (props) => {
 };
 
     const updateTask = (id, newValue) => {
-        props.setTask(prev => prev.map(item => (item.id === props.task.Id ? newValue : item)));
+
+        setTask(prev => prev.map(item => (task.id === id ? newValue : item)));
         
 
     }; 
 
     const deleteHandler = (e, id) => {
         e.preventDefault();
-        props.setTaskList(props.taskList.filter((t) => t.id !== id));
+        setTaskList(taskList.filter((taskList) => task.id !== id));
 
     };
+
     
+  
 
    
 
    
     return (
+        
         <div className = "add-task-page">
+            <div className = "blur">
+
+            </div>
             <h2 className =" add-task-page-heading">Create New Task</h2>
             <br/>
                 <form>
@@ -54,7 +64,10 @@ const AddTask = (props) => {
                 </form>
           
             <Button className= "add-button" color = "primary" size="lg" block onClick = {AddTask}>Add</Button>{' '}
-            <Button className = "cancel-button"  color = "secondary" size="lg" block>Cancel</Button>
+            
+        
+            <Button className = "cancel-button"  color = "secondary" size="lg" block onClick = {() => setstate("notvisible")} >Cancel</Button>
+            {state === "notvisible"}
             {taskList !== [] ?
             <ol>
                 {taskList.map(t => <li className="list-item">{t.value}
@@ -65,17 +78,21 @@ const AddTask = (props) => {
                     
                     )
                     }
+
+           
                   
             </ol>
             : null }
+
+        
         
         </div>
 
-    )
+    );
            
     
-
 }
 
-export default withRouter (AddTask);
+
+export default AddTaskmain;
 
