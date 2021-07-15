@@ -6,6 +6,7 @@
     
 }
 
+
 .page-heading{
     font-size: 50px;
     font-weight: bold;
@@ -106,9 +107,9 @@
 
 .filter-dropdown{
     width:  15% !important;
-    
-   
-    
+    position: fixed !important;
+    bottom:0 !important;
+    right: 0 !important; 
     margin-left: 80% !important;
     margin-top: 10px;
     
@@ -117,6 +118,15 @@
 .filter-dropdown-item{
     width: 15% !important;
 
+}
+.task-row{
+    margin : 50px;
+    
+    display: flexbox;
+    border: 5px black;
+    border-radius: 10px;
+    padding: 10px;
+    
 }
 
 

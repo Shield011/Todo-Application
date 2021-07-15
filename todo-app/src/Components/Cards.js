@@ -23,6 +23,7 @@ const Cards = ({taskObj, index, deleteTask, updateListArray}) => {
 
     return (
         <div className = "cards-list">
+            
             <div className = "task-row">
                 
                <p className = "task-details">{taskObj.Name}</p>

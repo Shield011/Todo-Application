@@ -9,11 +9,11 @@ const EditTask = ({modal, toggle, updateTask, taskObj})=> {
         setTaskDetails(e.target.value);
     }
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        setTaskDetails(taskObj.Name)
+    //     setTaskDetails(taskObj.Name)
 
-    }, [])
+    // }, [])
     
     const handleUpdate = (e) => {
         e.preventDefault();
