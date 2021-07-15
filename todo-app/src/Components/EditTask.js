@@ -1,28 +1,45 @@
-import React from 'react'
-import { Button } from 'reactstrap';
+import React, {useState, useEffect} from 'react'
+import { Button, Modal} from 'reactstrap';
 
-const EditTask = (props) => {
+const EditTask = ({modal, toggle, updateTask, taskObj})=> {
 
-    // const [edtitedTask, setEdtitedTask] = useState("")
-    const updateTask = (id, newValue) => {
-        props.setTask(prev => prev.map(item => (item.id === props.task.Id ? newValue : item)));
-        
+    const [taskDetails, setTaskDetails] = useState('')
 
-    };   
+    const handleChange = (e) => {
+        setTaskDetails(e.target.value);
+    }
+
+    // useEffect(() => {
+
+    //     setTaskDetails(taskObj.Name)
+
+    // }, [])
+    
+    const handleUpdate = (e) => {
+        e.preventDefault();
+        let tempObj = {}
+        tempObj["Value"] =taskDetails
+        updateTask(tempObj)
+
+    }
+
     
     return (
+        <Modal isOpen = {modal} toggle = {toggle}>
         <div className = "edit-task-page">
-            <h2 className =" edit-task-page-heading"> Edit Task</h2>
+            <h2 className =" edit-task-page-heading">Edit Task</h2>
             <br/>
                 <form>
                     <div className = "form-group">
-                        <textarea rows = "6" className="form-control" placeholder = "Write here.." name = "editTask"></textarea>
+                        <textarea rows = "6" className="form-control" value = {taskDetails} placeholder = "Write here.." name = "taskDetails" onChange = {handleChange}></textarea>
                     </div>
                 </form>
           
-            <Button className= "update-button" color = "primary" size="lg" block onClick = {e => updateTask(props.id, props.newValue)}>Update</Button>{' '}
-            <Button className = "canceledit-button"  color = "secondary" size="lg" block>Cancel</Button>
+            <Button className= "update-button" color = "primary" size="lg" block onClick = {handleUpdate}>Update</Button>{' '}
+            <Button className = "canceledit-button"  color = "secondary" size="lg" block onClick = {toggle}>Cancel</Button>
         </div>
+
+        </Modal>
            
     )
 }
